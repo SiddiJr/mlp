@@ -12,9 +12,9 @@ y_test = pd.DataFrame()
 #importa dataset
 col_names = ['ID', 'p_Sist', 'p_Diast','qualPres', 'pulso', 'resp', 'gravidade', 'clas_grav']
 df = pd.read_csv('datasets/data_20x20_42vic/sinais_vitais.txt', names = col_names, index_col=False)
-df = df[['ID', 'qualPres', 'pulso', 'resp', 'clas_grav']]
+df = df[['ID', 'qualPres', 'pulso', 'resp', 'gravidade']]
 X = df[['qualPres', 'pulso', 'resp']]
-y = df[['clas_grav']]
+y = df[['gravidade']]
 
 #tamanho do batch e número de folds
 batch_Size = 5
